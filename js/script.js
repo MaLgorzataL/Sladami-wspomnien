@@ -19,4 +19,5 @@ flkty.on( 'scroll', function() {
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
+  flkty.playPlayer()
 });
