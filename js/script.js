@@ -16,8 +16,7 @@ var transformProp = typeof docStyle.transform == 'string' ?
 flkty.on( 'scroll', function() {
   flkty.slides.forEach( function( slide, i ) {
     var img = imgs[i];
-    var x = ( slide.target + flkty.x ) * -1/3;
+    var x = ( slide.target + flkty.x );
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
   });
-  flkty.playPlayer()
 });
