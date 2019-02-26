@@ -9,6 +9,63 @@
     <link rel="stylesheet" type="text/css" href="sass/style.css">
   </head>
   <body>
+    var tablicaSlajdow = [
+      {
+        image: 'images/DSC00138.jpg',
+        title: '',
+        description : '<img src="images/DSC00138.jpg" alt="Mauzoleum Władysława Warneńczyka, Warna, Bułgaria" />
+        <div class="container">Mauzoleum Władysława Warneńczyka, Warna, Bułgaria</div>'
+      },
+      {
+        image: 'images/DSC00044.jpg',
+        title: '',
+        description : '<img src="images/DSC00044.jpg" alt="Nesebyr, Bułgaria"/>
+        <div class="container">Nesebyr, Bułgaria</div>'
+      },
+      {
+        image: 'images/DSC00124.jpg',
+        title: '',
+        description : '<img src="images/DSC00124.jpg" alt="Polwysep Kaliakra, Bulgaria" />
+        <div class="container">Półwysep Kaliakra, Bułgaria</div>
+'
+      },
+      {
+        image: 'images/DSC00349.jpg',
+        title: '',
+        description : '<img src="images/DSC00349.jpg" alt="Rzezba w parku, Sziraz, Iran" />
+        <div class="container">Rzeźba w parku, Sziraz, Iran</div>'
+      },
+      {
+        image: 'images/DSC00240.jpg',
+        title: '',
+        description : '<img src="images/DSC00240.jpg" alt="Park Teheran Iran" />
+        <div class="container">Teheran, Iran</div>'
+      },
+      {
+        image: 'images/DSC01250.jpg',
+        title: '',
+        description : '<img src="images/DSC01250.jpg" alt="Tisnov, Czechy" />
+        <div class="container">Tisnov, Czechy</div>'
+      },
+      {
+        image: 'images/DSC01265.jpg',
+        title: '',
+        description : '<img src="images/DSC01265.jpg" alt="Brno, Czechy" />
+        <div class="container">Brno, Czechy</div>'
+      },
+      {
+        image: 'images/DSC01415.jpg',
+        title: '',
+        description : '<img src="images/DSC01415.jpg" alt="Alanya, Turcja" />
+        <div class="container">Alanya, Turcja</div>'
+      },
+      {
+        image: '',
+        title: '',
+        description : '<img src="images/DSC01434.jpg" alt="Hotel Aska, Riviera Turecka" />
+        <div class="container">Hotel Aska, Riviera Turecka</div>' 
+      },
+    ];
     <h1>Śladami-wspomnień - zdjęcia z miejsc odwiedzonych</h1>
     <p>
       <a href="#1">Slajd 1</a>
@@ -23,7 +80,7 @@
     </p>
     <div class="carousel" data-flickity='{ "hash": true}'>
       <div id="1" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/10/08/21/19/background-1724651__340.jpg')">
-        <img src="images/DSC00138.jpg" alt="Mauzoleum Wladyslawa Warnenczyka, Warna, Bulgaria" />
+        <img src="images/DSC00138.jpg" alt="Mauzoleum Władysława Warneńczyka, Warna, Bułgaria" />
         <div class="container">Mauzoleum Władysława Warneńczyka, Warna, Bułgaria</div>
       </div>
       <div id="2" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2015/08/31/23/48/texture-916264__340.jpg')">
@@ -63,7 +120,7 @@
     <div class="progress-bar"></div>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
-    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
+    <script src="https://github.com/janl/mustache.js"></script>
     <script src="js/script.js"></script>
 
 </body>
