@@ -16,10 +16,22 @@ var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
   'transform' : 'WebkitTransform';
 
-flkty.on( 'scroll', function() {
+var progressBar = document.querySelector('.progress-bar');
+
+flkty.on( 'scroll', function(progress) {
   flkty.slides.forEach( function( slide, i ) {
     var img = imgs[i];
     var x = ( slide.target + flkty.x ) * -1/3;
     img.style[ transformProp ] = 'translateX(' + x  + 'px)';
+    progress = Math.max( 0, Math.min( 1, progress ) );
+    progressBar.style.width = progress * 100 + '%';
   });
 });
+
+var restart = document.querySelector('.button');
+
+restart.addEventListener( 'click', function( event ) {
+  flkty.select( '0', true, true );
+});
+
+
