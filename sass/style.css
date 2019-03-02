@@ -84,8 +84,8 @@ button {
 .progress-bar {
   height: 10px;
   width: 0;
-  background: #333;
+  background: silver;
   position: absolute;
-  top: 90%;
+  top: 92%;
   left: 0%;
 }
