@@ -43,16 +43,27 @@ body {
   background-size: cover;
 }
 
-.container {
+.container, .title {
   position: relative;
-  bottom: 70px;
-  left: 33%;
   background-color: silver;
   max-width: 1200px;
   width: 34%;
   padding: 15px;
   text-align: center;
   border-radius: 5%;
+}
+
+.container {
+  position: relative;
+  bottom: 70px;
+  left: 33%;
+}
+
+.title {
+  position: absolute;
+  top:  0;
+  left: 6%;
+  max-width: 200px;
 }
 
 @media screen and ( min-width: 768px ) {
@@ -73,7 +84,7 @@ body {
 
 button {
   position: absolute;
-  top: 82%;
+  top: 77%;
   right: 0%;
   background-color: turquoise;
   color: black;

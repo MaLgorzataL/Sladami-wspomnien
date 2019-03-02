@@ -9,63 +9,6 @@
     <link rel="stylesheet" type="text/css" href="sass/style.css">
   </head>
   <body>
-    var tablicaSlajdow = [
-      {
-        image: 'images/DSC00138.jpg',
-        title: '',
-        description : '<img src="images/DSC00138.jpg" alt="Mauzoleum Władysława Warneńczyka, Warna, Bułgaria" />
-        <div class="container">Mauzoleum Władysława Warneńczyka, Warna, Bułgaria</div>'
-      },
-      {
-        image: 'images/DSC00044.jpg',
-        title: '',
-        description : '<img src="images/DSC00044.jpg" alt="Nesebyr, Bułgaria"/>
-        <div class="container">Nesebyr, Bułgaria</div>'
-      },
-      {
-        image: 'images/DSC00124.jpg',
-        title: '',
-        description : '<img src="images/DSC00124.jpg" alt="Polwysep Kaliakra, Bulgaria" />
-        <div class="container">Półwysep Kaliakra, Bułgaria</div>
-'
-      },
-      {
-        image: 'images/DSC00349.jpg',
-        title: '',
-        description : '<img src="images/DSC00349.jpg" alt="Rzezba w parku, Sziraz, Iran" />
-        <div class="container">Rzeźba w parku, Sziraz, Iran</div>'
-      },
-      {
-        image: 'images/DSC00240.jpg',
-        title: '',
-        description : '<img src="images/DSC00240.jpg" alt="Park Teheran Iran" />
-        <div class="container">Teheran, Iran</div>'
-      },
-      {
-        image: 'images/DSC01250.jpg',
-        title: '',
-        description : '<img src="images/DSC01250.jpg" alt="Tisnov, Czechy" />
-        <div class="container">Tisnov, Czechy</div>'
-      },
-      {
-        image: 'images/DSC01265.jpg',
-        title: '',
-        description : '<img src="images/DSC01265.jpg" alt="Brno, Czechy" />
-        <div class="container">Brno, Czechy</div>'
-      },
-      {
-        image: 'images/DSC01415.jpg',
-        title: '',
-        description : '<img src="images/DSC01415.jpg" alt="Alanya, Turcja" />
-        <div class="container">Alanya, Turcja</div>'
-      },
-      {
-        image: '',
-        title: '',
-        description : '<img src="images/DSC01434.jpg" alt="Hotel Aska, Riviera Turecka" />
-        <div class="container">Hotel Aska, Riviera Turecka</div>' 
-      },
-    ];
     <h1>Śladami-wspomnień - zdjęcia z miejsc odwiedzonych</h1>
     <p>
       <a href="#1">Slajd 1</a>
@@ -78,50 +21,87 @@
       <a href="#8">Slajd 8</a>
       <a href="#9">Slajd 9</a>
     </p>
-    <div class="carousel" data-flickity='{ "hash": true}'>
-      <div id="1" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/10/08/21/19/background-1724651__340.jpg')">
-        <img src="images/DSC00138.jpg" alt="Mauzoleum Władysława Warneńczyka, Warna, Bułgaria" />
-        <div class="container">Mauzoleum Władysława Warneńczyka, Warna, Bułgaria</div>
-      </div>
-      <div id="2" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2015/08/31/23/48/texture-916264__340.jpg')">
-        <img src="images/DSC00044.jpg" alt="Nesebyr, Bulgaria"/>
-        <div class="container">Nesebyr, Bułgaria</div>
-      </div>
-      <div id="3" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697__340.jpg')">
-        <img src="images/DSC00124.jpg" alt="Polwysep Kaliakra, Bulgaria" />
-        <div class="container">Półwysep Kaliakra, Bułgaria</div>
-      </div>
-      <div id="4" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/09/22/20/51/background-1688290__340.jpg')">
-        <img src="images/DSC00349.jpg" alt="Rzezba w parku, Sziraz, Iran" />
-        <div class="container">Rzeźba w parku, Sziraz, Iran</div>
-      </div>
-      <div id="5" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/09/28/11/43/background-1700290__340.jpg')">
-        <img src="images/DSC00240.jpg" alt="Park Teheran Iran" />
-        <div class="container">Teheran, Iran</div>
-      </div>
-      <div id="6" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/10/08/13/47/scrapbook-1723742__340.jpg')">
-        <img src="images/DSC01250.jpg" alt="Tisnov, Czechy" />
-        <div class="container">Tisnov, Czechy</div>
-      </div>
-      <div id="7" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/10/05/08/45/background-1716222__340.jpg')">
-        <img src="images/DSC01265.jpg" alt="Brno, Czechy" />
-        <div class="container">Brno, Czechy</div>
-      </div>
-      <div id="8" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2016/09/21/16/34/background-1685150__340.jpg')">
-        <img src="images/DSC01415.jpg" alt="Alanya, Turcja" />
-        <div class="container">Alanya, Turcja</div>
-      </div>
-      <div id="9" class="carousel-cell" style="background-image:url('https://cdn.pixabay.com/photo/2015/05/15/14/52/water-768745__340.jpg')">
-        <img src="images/DSC01434.jpg" alt="Hotel Aska, Riviera Turecka" />
-        <div class="container">Hotel Aska, Riviera Turecka</div>
-      </div>
+    <div id="page-wrapper" >
+      <div id="results" class="carousel"></div>
     </div>
-    <button class="button">Restart</button>
-    <div class="progress-bar"></div>
+      
+    <script id="template-lista-slajdow" type="x-tmpl-mustache">
+        <div class="carousel-cell" style="background-image:url({{tlo}})">
+          <img src={{image}} alt={{title}} />
+        </div>
+    </script>
+      
+    <script id="template-opis-slajdu" type="x-tmpl-mustache">
+      <div class="title"> {{title}}</div>
+      {{{description}}}
+    </script>
+      
+      
+    <script>
+      var dataImages = [
+        {
+          image: 'images/DSC00138.jpg', 
+          tlo:   'https://cdn.pixabay.com/photo/2016/10/08/21/19/background-1724651__340.jpg',
+          title: 'Bułgaria',
+          description: '<div class="container">Mauzoleum Władysława Warneńczyka, Warna</div>'
+        },
+        {
+          image: 'images/DSC00044.jpg', 
+          tlo:   'https://cdn.pixabay.com/photo/2015/08/31/23/48/texture-916264__340.jpg',
+          title: 'Bułgaria',
+          description: '<div class="container">cerkiew, Nesebyr, Bułgaria</div>'
+        },
+        {
+          image: 'images/DSC00124.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697__340.jpg',
+          title: 'Bułgaria',
+          description: '<div class="container">Półwysep Kaliakra, Bułgaria</div>'
+        },
+        {
+          image: 'images/DSC00349.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2016/09/22/20/51/background-1688290__340.jpg', 
+          title: 'Iran',
+          description: '<div class="container">Rzeźba w parku, Sziraz, Iran</div>'
+        },
+        {
+          image: 'images/DSC00240.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2016/09/28/11/43/background-1700290__340.jpg', 
+          title: 'Iran',
+          description: '<div class="container">Pałac, Teheran, Iran</div>'
+        },
+        {
+          image: 'images/DSC01250.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2016/10/08/13/47/scrapbook-1723742__340.jpg', 
+          title: 'Czechy',
+          description: '<div class="container">Tisnov, Czechy</div>'
+        },
+        {
+          image: 'images/DSC01265.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2016/10/05/08/45/background-1716222__340.jpg', 
+          title: 'Czechy',
+          description: '<div class="container">przy Katedrze, Brno, Czechy</div>'
+        },
+        {
+          image: 'images/DSC01415.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2016/09/21/16/34/background-1685150__340.jpg', 
+          title: 'Turcja',
+          description: '<div class="container">brzeg morza, Alanya, Turcja</div>'
+        },
+        {
+          image: 'images/DSC01434.jpg',
+          tlo:   'https://cdn.pixabay.com/photo/2015/05/15/14/52/water-768745__340.jpg', 
+          title: 'Turcja',
+          description: '<div class="container">Hotel Aska, Riviera Turecka</div>'
+        },
+      ];
+    </script>
+      
+     <button class="button">Restart</button>
+     <div class="progress-bar"></div>
 
     <script src="vendor/flickity.pkgd.min.js"></script>
-    <script src="https://github.com/janl/mustache.js"></script>
+    <script src="vendor/mustache.js"></script>
     <script src="js/script.js"></script>
-
-</body>
-</html>
+  
+  </body>
+  </html>
