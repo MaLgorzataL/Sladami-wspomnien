@@ -1,15 +1,6 @@
 
 // external js: flickity.pkgd.js
 
-var carousel = document.querySelector('.carousel');
-var flkty = new Flickity( carousel, {
-  imagesLoaded: true,
-  percentPosition: false,
-  wrapAround:true,
-  pageDots:false,
-  autoPlay: true, 
-  hash: true
-});
 (function() { 
   //stworzenie zmiennych z kodem szablonów
   var templateList = document.getElementById('template-lista-slajdow').innerHTML;
@@ -25,17 +16,27 @@ var listaSlajdow = '';	// Tworzymy zmienną, w której chcemy mieć kod HTML wsz
   2. dodaje ten wygenrowany kod HTML do zmiennej listaSlajdow. */
 
 for (var i = 0; i < dataImages.length; i++){
-  //console.log(dataImages);
-  listaSlajdow+= Mustache.render(templateList, dataImages[i]); // Wygenerowanie slajdu z tłem
+  console.log(dataImages);
+  listaSlajdow+= Mustache.render(templateList, dataImages[i]); // Wygenerowanie slajdu z tłem,
+  templateList.id = toString(i);// dodanie id
   listaSlajdow+= Mustache.render(templateImage, dataImages[i]); // Dodanie tytułu i opisu
-  document.write(dataImages[i].title);
-  };
+  }
 
  // Pozostaje nam dodać wygenerowany kod HTML na naszej stronie, na końcu diva z id="results".
 	var results = document.getElementById('results');
 	results.insertAdjacentHTML('beforeend', listaSlajdow);
 	           
-})(); 
+})();
+
+var carousel = document.querySelector('.carousel');
+var flkty = new Flickity( carousel, {
+  imagesLoaded: true,
+  percentPosition: false,
+  wrapAround:true,
+  pageDots:false,
+  autoPlay: true, 
+  hash: true
+});
 var imgs = carousel.querySelectorAll('.carousel-cell img');
 // get transform property
 var docStyle = document.documentElement.style;
