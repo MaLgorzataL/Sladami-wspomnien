@@ -78,7 +78,7 @@ button {
   background-color: turquoise;
   color: black;
   font-size: 25px;
-  padding: 15px;
+  padding: 5px;
 }
 
 .progress-bar {
@@ -86,14 +86,18 @@ button {
   width: 0;
   background: silver;
   position: absolute;
-  top: 92%;
+  top: 90%;
   left: 0%;
+}
+
+h3 {
+  text-align: center;
 }
 
 /* Set the size of the div element that contains the map */
 #map {
-  height: 400px;  /* The height is 400 pixels */
-  width: 100%;  /* The width is the width of the web page */
-  background-color: grey;
-
- }
+  height: 50%;
+  min-height: 250px;
+  width: 50%;  /* The width is the width of the web page */
+  margin-left: 25%;
+}
