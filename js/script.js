@@ -34,25 +34,36 @@ restart.addEventListener( 'click', function( event ) {
 	
 	// Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
   	window.initMap = function() {
-		
 		// Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
-		var warna = {lat: 43.2166700, lng: 27.9166700};
-		
-		// W zmiennej map zapisujemy nową instancję obiektu Map. 
+		slajdCords = dataImages[0].coords;
+		// W tablicy maps zapisujemy nowe instancje obiektu Map. 
 		var map = new google.maps.Map(document.getElementById('map'), {
 			// Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
 			zoom: 4,
-			center: warna
+			center: slajdCords
 		});
 		
 		// Definiujemy marker jako nową instancję obiektu Marker.
 		var marker = new google.maps.Marker({
 			// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-			position: warna,
+			position: slajdCords,
 			map: map
 		}); 
 	}	
 	 
 })();  
 
-
+flkty.on( 'change', function( index ) {
+	slajdCords = dataImages[index].coords;
+	map = new google.maps.Map(document.getElementById('map'), {
+		// Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
+		zoom: 4,
+		center: slajdCords
+	});
+	// Definiujemy marker jako nową instancję obiektu Marker.
+	marker = new google.maps.Marker({
+		// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
+		position: slajdCords,
+		map: map
+	});
+});
