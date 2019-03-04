@@ -61,6 +61,7 @@ flkty.on( 'change', function( index ) {
 		center: slajdCords
 	});
 	// Definiujemy marker jako nową instancję obiektu Marker.
+
 	marker = new google.maps.Marker({
 		// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
 		position: slajdCords,
