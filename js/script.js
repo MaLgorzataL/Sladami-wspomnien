@@ -34,37 +34,48 @@ restart.addEventListener( 'click', function( event ) {
 	
 	// Definujemy funkcję initMap w zakresie globalnym (czyli jako właściwość obiektu window).
   	window.initMap = function() {
-		// Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
-		slajdCords = dataImages[0].coords;
-		// W tablicy maps zapisujemy nowe instancje obiektu Map. 
-		var map = new google.maps.Map(document.getElementById('map'), {
+			// Zapisujemy w zmiennej obiekt zawierający współrzędne geograficzne.
+			var infos = document.getElementById('infos'); 
+			var markerS = [];	//  Tablice pozycji wszystkich markerów
+
+		// W tablicy maps zapisujemy nowe instancje obiektu Map, wycentrowane dla slajdu i
+			var	map = new google.maps.Map(document.getElementById('map'), {
 			// Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
-			zoom: 4,
-			center: slajdCords
+				zoom: 4,
+				center: dataImages[0].coords
 		});
-		
-		// Definiujemy marker jako nową instancję obiektu Marker.
-		var marker = new google.maps.Marker({
+		for (var i = 0; i < dataImages.length; i++) {
+		// Dodajemy marker w centrum i pozostałe dookoła jako nowe instancje obiektu Marker.
+			marker = new google.maps.Marker({
 			// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-			position: slajdCords,
+			position: dataImages[i].coords,
 			map: map
 		}); 
+		marker.addListener('click', function(){
+			// Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
+			infos.innerHTML = dataImages[i].description;
+		});
+	}
 	}	
 	 
 })();  
 
 flkty.on( 'change', function( index ) {
-	slajdCords = dataImages[index].coords;
-	map = new google.maps.Map(document.getElementById('map'), {
+	var	map = new google.maps.Map(document.getElementById('map'), {
 		// Podajemy opcje mapy, np. zoom i punkt wycentrowania mapy.
-		zoom: 4,
-		center: slajdCords
+			zoom: 3,
+			center: dataImages[index].coords
 	});
-	// Definiujemy marker jako nową instancję obiektu Marker.
-
-	marker = new google.maps.Marker({
-		// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
-		position: slajdCords,
-		map: map
-	});
+	for (var i = 0; i < dataImages.length; i++) {
+		// Dodajemy marker w centrum i pozostałe dookoła jako nowe instancje obiektu Marker.
+			marker = new google.maps.Marker({
+			// I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
+			position: dataImages[i].coords,
+			map: map
+		});
+		marker.addListener('click', function(){
+			// Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
+			infos.innerHTML = dataImages[i].description;
+		});
+	}
 });
