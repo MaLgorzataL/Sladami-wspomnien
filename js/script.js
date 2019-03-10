@@ -48,7 +48,7 @@ restart.addEventListener( 'click', function( event ) {
 
 
 flkty.on( 'change', function( index ) {
-  var clicked = 0;
+  var clicked;
 	//Najpierw wykorzystujemy metodę panTo w obiekcie map do przesunięcia współrzędnych mapy:
 	map.panTo(dataImages[index].coords);
 	// A następnie zmieniamy powiększenie mapy:
@@ -60,11 +60,11 @@ flkty.on( 'change', function( index ) {
         position: dataImages[i].coords,
         map: map
       });
-      marker.id = i;
-		  marker.addListener('click', function(){
+      marker.id = parseInt(i);
+		  marker.addListener('click', function(marker){
 			  // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
-        
+        clicked = toString(marker.id);
       });
-  //infos.innerHTML = dataImages[clicked].title;
+  infos.innerHTML = dataImages[clicked].description;
   }	
 });
