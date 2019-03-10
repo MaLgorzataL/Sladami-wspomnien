@@ -48,21 +48,23 @@ restart.addEventListener( 'click', function( event ) {
 
 
 flkty.on( 'change', function( index ) {
-		 //Najpierw wykorzystujemy metodę panTo w obiekcie map do przesunięcia współrzędnych mapy:
-		map.panTo(dataImages[index].coords);
-		// A następnie zmieniamy powiększenie mapy:
-    map.setZoom(10);
+  var clicked = 0;
+	//Najpierw wykorzystujemy metodę panTo w obiekcie map do przesunięcia współrzędnych mapy:
+	map.panTo(dataImages[index].coords);
+	// A następnie zmieniamy powiększenie mapy:
+  map.setZoom(10);
     for (var i = 0; i < dataImages.length; i++) {
       // Dodajemy marker w centrum i pozostałe dookoła jako nowe instancje obiektu Marker.
-        var marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
         // I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
         position: dataImages[i].coords,
         map: map
       });
-    
-		marker.addListener('click', function(){
-			// Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
-			infos.innerHTML = dataImages[i].description;
-    });
+      marker.id = i;
+		  marker.addListener('click', function(){
+			  // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
+        
+      });
+  //infos.innerHTML = dataImages[clicked].title;
   }	
 });
