@@ -27,13 +27,10 @@
       
     <script id="template-lista-slajdow" type="x-tmpl-mustache">
         <div class="carousel-cell" style="background-image:url({{tlo}})">
-          <img src={{image}} alt={{title}} />
+            <img src={{image}} alt={{title}} />
+            <div class="title"> {{title}}</div>
+            {{{description}}}
         </div>
-    </script>
-      
-    <script id="template-opis-slajdu" type="x-tmpl-mustache">
-      <div class="title"> {{title}}</div>
-      {{{description}}}
     </script>
       
       

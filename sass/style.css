@@ -44,7 +44,6 @@ body {
 }
 
 .container, .title {
-  position: relative;
   background-color: silver;
   max-width: 1200px;
   width: 34%;
@@ -61,15 +60,9 @@ body {
 
 .title {
   position: absolute;
-  top:  0;
+  top:  5%;
   left: 6%;
   max-width: 200px;
-}
-
-@media screen and ( min-width: 768px ) {
-  .carousel-cell img {
-    height: 400px;
-  }
 }
 
 /* cell number */
@@ -97,6 +90,29 @@ button {
   width: 0;
   background: #333;
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 0%;
+}
+
+@media screen and ( min-width: 400px ) and ( max-width: 900px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+  .title {
+    position: absolute;
+    top:  5%;
+  }
+  button {
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 97%;
+    left: 0%;
+  }
 }
