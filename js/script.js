@@ -12,6 +12,7 @@ var flkty = new Flickity( carousel, {
 });
 
 var imgs = carousel.querySelectorAll('.carousel-cell img');
+var descriptions = carousel.querySelectorAll('.container');
 // get transform property
 var docStyle = document.documentElement.style;
 var transformProp = typeof docStyle.transform == 'string' ?
@@ -46,25 +47,32 @@ restart.addEventListener( 'click', function( event ) {
   }        
 })();
 
+function changeSlide(marker, i) {
+  // Zmiana slajdu po kliknieciu markera
+  marker.addListener('click', function() {
+    flkty.select( i, true, true );
+    map.panTo(dataImages[i].coords);
+    map.setZoom(7);
+  });
+}
+
 
 flkty.on( 'change', function( index ) {
-  var clicked;
+
 	//Najpierw wykorzystujemy metodę panTo w obiekcie map do przesunięcia współrzędnych mapy:
 	map.panTo(dataImages[index].coords);
 	// A następnie zmieniamy powiększenie mapy:
-  map.setZoom(10);
+  map.setZoom(5);
+
     for (var i = 0; i < dataImages.length; i++) {
+  
       // Dodajemy marker w centrum i pozostałe dookoła jako nowe instancje obiektu Marker.
       var marker = new google.maps.Marker({
         // I podajemy opcje tego markera, np. na której mapie ma być dodany oraz jakie są jego współrzędne. 
         position: dataImages[i].coords,
-        map: map
+        map: map,
+        title: descriptions[i].innerText,
       });
-      marker.id = parseInt(i);
-		  marker.addListener('click', function(marker){
-			  // Wewnątrz funcji wpisujemy kod, który ma się wykonać po kliknięciu markera. W tym przykładzie wyświetlimy tekst na stronie. 
-        clicked = toString(marker.id);
-      });
-  infos.innerHTML = dataImages[clicked].description;
-  }	
-});
+      changeSlide(marker,i);
+    }
+  });
