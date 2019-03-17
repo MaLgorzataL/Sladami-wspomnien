@@ -55,12 +55,6 @@ body {
   border-radius: 5%;
 }
 
-@media screen and ( min-width: 768px ) {
-  .carousel-cell img {
-    height: 400px;
-  }
-}
-
 /* cell number */
 .carousel-cell:after {
   display: block;
@@ -71,27 +65,68 @@ body {
   color: white;
 }
 
+.container, .title {
+  background-color: silver;
+  max-width: 1200px;
+  width: 34%;
+  padding: 15px;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.container {
+  position: relative;
+  bottom: 70px;
+  left: 33%;
+}
+
+.title {
+  position: absolute;
+  top:  5%;
+  left: 6%;
+  max-width: 200px;
+}
+
 button {
   position: absolute;
-  top: 82%;
+  top: 77%;
   right: 0%;
   background-color: turquoise;
   color: black;
   font-size: 25px;
-  padding: 5px;
+  padding: 15px;
 }
 
 .progress-bar {
   height: 10px;
   width: 0;
-  background: silver;
+  background: #333;
   position: absolute;
-  top: 90%;
+  top: 85%;
   left: 0%;
 }
 
-h3 {
-  text-align: center;
+@media screen and ( min-width: 400px ) and ( max-width: 900px ) {
+  .carousel-cell img {
+    height: 400px;
+  }
+  .title {
+    position: absolute;
+    top:  5%;
+  }
+  button {
+    position: absolute;
+    top: 90%;
+    right: 0%;
+    padding: 5px;
+    font-size: 20px;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    top: 97%;
+    left: 0%;
+  }
 }
 
 /* Set the size of the div element that contains the map */
