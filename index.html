@@ -27,7 +27,7 @@
       </div>
         
       <script id="template-lista-slajdow" type="x-tmpl-mustache">
-          <div class="carousel-cell" style="background-image:url({{tlo}})">
+          <div id = {{id}} class="carousel-cell" style="background-image:url({{tlo}})">
               <img src={{image}} alt={{title}} />
               <div class="title"> {{title}}</div>
               {{{description}}}
@@ -38,6 +38,7 @@
 
       var dataImages = [
         {
+          id:     'sl0',
           image: 'images/DSC00138.jpg', 
           tlo:   'https://cdn.pixabay.com/photo/2016/10/08/21/19/background-1724651__340.jpg',
           title: 'Bułgaria',
@@ -45,6 +46,7 @@
           coords: {lat: 43.2166700, lng: 27.9166700}
         },
         {
+          id:     'sl1',
           image: 'images/DSC00044.jpg', 
           tlo:   'https://cdn.pixabay.com/photo/2015/08/31/23/48/texture-916264__340.jpg',
           title: 'Bułgaria',
@@ -52,6 +54,7 @@
           coords: {lat: 42.3911, lng: 27.4122}
         },
         {
+          id:     'sl2',
           image: 'images/DSC00124.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2018/09/03/23/56/sea-3652697__340.jpg',
           title: 'Bułgaria',
@@ -59,6 +62,7 @@
           coords: {lat: 43.3613, lng: 28.4655}
         },
         {
+          id:     'sl3',
           image: 'images/DSC00349.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2016/09/22/20/51/background-1688290__340.jpg', 
           title: 'Iran',
@@ -66,6 +70,7 @@
           coords: {lat: 29.63916191334325, lng: 52.15128863587673}
         },
         {
+          id:     'sl4',
           image: 'images/DSC00240.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2016/09/28/11/43/background-1700290__340.jpg', 
           title: 'Iran',
@@ -73,6 +78,7 @@
           coords: {lat: 35.74996096733132, lng: 51.39566557261407}
         },
         {
+          id:     'sl5',
           image: 'images/DSC01250.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2016/10/08/13/47/scrapbook-1723742__340.jpg', 
           title: 'Czechy',
@@ -80,6 +86,7 @@
           coords: {lat: 49.348838, lng: 16.4244906}
         },
         {
+          id:     'sl6',
           image: 'images/DSC01265.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2016/10/05/08/45/background-1716222__340.jpg', 
           title: 'Czechy',
@@ -87,6 +94,7 @@
           coords: {lat: 49.1922443, lng: 16.6113382}
         },
         {
+          id:     'sl7',
           image: 'images/DSC01415.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2016/09/21/16/34/background-1685150__340.jpg', 
           title: 'Turcja',
@@ -94,6 +102,7 @@
           coords: {lat: 36.5472591, lng: 32.0011182}
         },
         {
+          id:     'sl8',
           image: 'images/DSC01434.jpg',
           tlo:   'https://cdn.pixabay.com/photo/2015/05/15/14/52/water-768745__340.jpg', 
           title: 'Turcja',
